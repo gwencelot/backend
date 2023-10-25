@@ -6,7 +6,7 @@ use App\Http\Controllers\Api\CarouselItemsController;
 use App\Models\CarouselItems;
 /*
 |--------------------------------------------------------------------------
-| API Routes
+| API Routes 
 |--------------------------------------------------------------------------
 |
 | Here is where you can register API routes for your application. These
@@ -21,4 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/carousel', [CarouselItemsController::class, 'index']);
+
+Route::get('/carousel/{id}', [CarouselItemsController::class, 'show']);
 
